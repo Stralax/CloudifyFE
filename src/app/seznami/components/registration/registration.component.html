@@ -1,0 +1,54 @@
+
+<div class="body">
+    <div class="register-column">
+        <div class="register-section">
+            <h2 style="justify-self: center; margin-bottom: 2rem;">Registration</h2>
+            <form (ngSubmit)="onSave()"> 
+                <div class="red">
+                    <label for="floatingInput1">Username</label>
+                    <div class="w-100 h-100">
+                        <input type="text"  class="form-control h-100" id="floatingInput1" placeholder="Username" />
+                    </div>
+                    <p style="color: rgb(255, 0, 0);"></p>
+                </div>
+                <div class="red">
+                    <label for="floatingInput2">First Name</label>
+                    <div class="w-100 h-100">
+                        <input type="text"  class="form-control h-100" id="floatingInput2" placeholder="First Name" />
+                    </div>
+                    <p style="color: rgb(255, 0, 0);" ></p>
+                </div>
+                <div class="red">
+                    <label for="floatingInput3">Last Name</label>
+                    <div class="w-100 h-100">
+                        <input type="text" class="form-control h-100" id="floatingInput3" placeholder="Last Name" />
+                    </div>
+                    <p style="color: rgb(255, 0, 0);" ></p>
+                </div>
+                <div class="red">
+                    <label for="floatingInput3">E-mail</label>
+                    <div class="w-100 h-100">
+                        <input type="email"  class="form-control h-100" id="floatingInput4" placeholder="E-mail" />
+                    </div>
+                    <p style="color: rgb(255, 0, 0);"></p>
+                </div>
+                <div class="red">
+                    <label for="floatingInput5">New password</label>
+                    <div class="w-100 h-100">
+                        <input type="password"  class="form-control h-100" name="password" id="floatingInput5" placeholder="New Password"/>
+                    </div>
+                    <p style="color: rgb(255, 0, 0);"></p>
+                </div>
+                <div class="red">
+                    <label for="floatingInput6">Confirm new password</label>
+                    <div class="w-100 h-100">
+                        <input type="password" class="form-control h-100" id="floatingInput6" placeholder="Confirm Password"/>
+                    </div>
+                    <p style="color: rgb(255, 0, 0);" ></p>
+                </div>
+
+                <button type="submit" class="btn btn-success">Register</button>
+            </form>
+        </div>
+    </div>
+</div>

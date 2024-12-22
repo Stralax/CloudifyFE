@@ -23,7 +23,7 @@ import {SeznamiService} from './seznami/services/seznami.service';
         AppComponent,
         SeznamiComponent,
         SeznamPodrobnostiComponent,
-        ArtikelDodajComponent
+        ArtikelDodajComponent,
     ],
     providers: [SeznamiService],
     bootstrap: [AppComponent]

@@ -1,0 +1,35 @@
+<!-- <link rel="stylesheet" type="text/css" href="../../../../public/assets/css/login.css"> -->
+
+<div class="body" style="background-color: transparent; justify-items: center;">
+    <div class="login-column">
+        <div class="login-section">
+            <h2>Sign In</h2>
+            <p>Sign in by entering information below</p>
+            <form  action="#" class="login-form">
+
+                <!-- <div *ngIf="formError" class="form-group">
+                    <div class="alert alert-dark p-2 mt-4" role="alert">
+                    <i class="fas fa-exclamation-triangle pe-2"></i>{{ formError }}
+                    </div>
+                </div>  -->
+
+                <div class="mb-3 email">
+                    <label for="exampleInputEmail1" class="form-label email-text">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter e-mail address">
+                </div>
+                <div class="mb-3 position-relative">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input class="form-control pr-5" id="exampleInputPassword1" name="password" placeholder="Enter password">
+                    <i class="fa" style="position: absolute; top: 75%; right: 10px; transform: translateY(-50%); cursor: pointer; z-index: 10; color: #6c757d;"></i>
+                </div>
+                <div class="submit-bottom">
+                    <button type="submit" class="btn">Get Started</button>
+                </div>
+            </form>
+            <div class="registration">
+                <p>Don't have an account yet?</p>
+                <a routerLink="/registration" id="link">Register</a>
+            </div>
+        </div>
+    </div>
+</div>
