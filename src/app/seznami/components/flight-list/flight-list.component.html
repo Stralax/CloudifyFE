@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<h2> Flights: </h2>
+
+<div class="card help">
+    <h5 class="card-header">Featured</h5>
+    <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary" >Go somewhere</a>
+    </div>
+</div>
+
+
+<div class="flight-list">
+    <div *ngFor="let flight of flights" class="flight-card">
+
+
+        <div class="card help">
+            <h5 class="card-header">{{ flight.airline }} - {{ flight.flightId }}</h5>
+            <div class="card-body">
+              <h5 class="card-title">{{ flight.origin }} -> {{ flight.destination }}</h5>
+              <p class="card-text"> {{ flight.departureTime | date:'short' }} | ${{ flight.price }} | {{ flight.duration }} | {{ flight.maxSeats }} | {{ flight.travelClass }}</p>
+              <a href="#"  class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+      <!-- <h2>{{ flight.airline }} - {{ flight.flightId }}</h2>
+      <p><strong>Origin:</strong> {{ flight.origin }}</p>
+      <p><strong>Destination:</strong> {{ flight.destination }}</p>
+      <p><strong>Departure Time:</strong> {{ flight.departureTime | date:'short' }}</p>
+      <p><strong>Arrival Time:</strong> {{ flight.arrivalTime | date:'short' }}</p>
+      <p><strong>Price:</strong> ${{ flight.price }}</p>
+      <p><strong>Duration:</strong> {{ flight.duration }}</p>
+      <p><strong>Seats Available:</strong> {{ flight.maxSeats }}</p>
+      <p><strong>Travel Class:</strong> {{ flight.travelClass }}</p> -->
+    </div>
+  </div>
+  
