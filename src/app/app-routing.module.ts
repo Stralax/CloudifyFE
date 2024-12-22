@@ -7,10 +7,12 @@ import { ArtikelDodajComponent } from './seznami/components/artikel-dodaj.compon
 import { LoginComponent } from './seznami/components/login/login.component';
 import { RegistrationComponent } from './seznami/components/registration/registration.component';
 
-export const routes: Routes = [
+const routes: Routes = [
+    {path: '', redirectTo: '/seznami', pathMatch: 'full'},
     {path: 'login', component: LoginComponent},
     {path: 'registration', component: RegistrationComponent},
-
+    {path: 'seznami/:id', component: SeznamPodrobnostiComponent},
+    {path: 'seznami/:id/dodaj', component: ArtikelDodajComponent},
 ];
 
 @NgModule({
