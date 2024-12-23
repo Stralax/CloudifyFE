@@ -1,1 +1,0 @@
-{"ast":null,"code":"var Flight = /** @class */function () {\n  function Flight() {}\n  return Flight;\n}();\nexport { Flight };","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
