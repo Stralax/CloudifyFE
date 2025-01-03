@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<div class="search-container">
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Enter departure city" [(ngModel)]="fromLocation" />
+        <input type="text" class="search-input" placeholder="Enter destination city" [(ngModel)]="toLocation" />
+        <input type="date" class="search-input" placeholder="Select departure date" [(ngModel)]="departureDate" />
+        <input type="number" class="search-input" placeholder="Enter number of seats" [(ngModel)]="seats" min="1" />
+        <select class="search-input" [(ngModel)]="travelClass">
+            <option value="" disabled selected>Select travel class</option>
+            <option value="economy">Economy</option>
+            <option value="business">Business</option>
+            <option value="first">First Class</option>
+        </select>
+        <button class="search-button" (click)="searchFlights()">Search</button>
+    </div>
+</div>
