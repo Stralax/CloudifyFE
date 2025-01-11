@@ -1,6 +1,19 @@
 <app-navbar></app-navbar>
 <div class="detail-container">
-    <h2>Flight Details</h2>
+
+    <div class="Flight-inormation">
+        <h2>Flight Details</h2>
+        <p><strong>Flight ID:</strong> {{ flightDetails.flightId }}</p>
+        <p><strong>Airline:</strong> {{ flightDetails.airline }}</p>
+        <p><strong>Origin:</strong> {{ flightDetails.origin }}</p>
+        <p><strong>Destination:</strong> {{ flightDetails.destination }}</p>
+        <p><strong>DepartureTime:</strong> {{ flightDetails.departureTime }}</p>
+        <p><strong>ArrivalTime:</strong> {{ flightDetails.arrivalTime }} $</p>
+        <p><strong>Price:</strong> {{ flightDetails.price }}</p>
+        <p><strong>Duration:</strong> {{ flightDetails.duration }}</p>
+        <p><strong>MaxSeats:</strong> {{ flightDetails.maxSeats }}</p>
+        <p><strong>Travel Class:</strong> {{ flightDetails.travelClass }}</p>
+    </div>
 
     <app-weather-and-delay></app-weather-and-delay>
 

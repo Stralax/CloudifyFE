@@ -21,7 +21,7 @@ const routes: Routes = [
     {path: 'navbar', component: NavbarComponent},
     {path: 'search-home', component: SearchHomePageComponent},
     {path: 'profile', component: ProfileComponent},
-    {path: 'details', component: DetailForPickedFlightComponent}
+    {path: 'details/:id', component: DetailForPickedFlightComponent}
 ];
 
 @NgModule({
