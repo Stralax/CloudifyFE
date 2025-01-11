@@ -1,7 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FlightListComponent } from '../flight-list/flight-list.component';
+import { FlightService } from '../../services/flight.service';
+import { Flight } from '../../classes/flight';
+import { ChangeDetectorRef } from '@angular/core';
+import { NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-search-home-page',
@@ -10,6 +14,7 @@ import { FlightListComponent } from '../flight-list/flight-list.component';
     FormsModule, NavbarComponent, FlightListComponent
   ],
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./search-home-page.component.css']
 })
 export class SearchHomePageComponent {
@@ -19,13 +24,40 @@ export class SearchHomePageComponent {
   seats: number = 1;
   travelClass: string = '';
 
+  public flights: Flight[] = [];
+
+  constructor(private flightService: FlightService, private changeDetectorRef: ChangeDetectorRef, private ngZone: NgZone) {}
+
   searchFlights() {
-    console.log('Searching for flights...');
-    console.log(`From: ${this.fromLocation}`);
-    console.log(`To: ${this.toLocation}`);
-    console.log(`Date: ${this.departureDate}`);
-    console.log(`Seats: ${this.seats}`);
-    console.log(`Class: ${this.travelClass}`);
-    // Here, you can implement the logic to trigger the actual search, either by making an API call or navigating to a results page.
+    if (
+        !this.fromLocation ||
+        !this.toLocation ||
+        !this.departureDate ||
+        !this.travelClass
+    ) {
+      alert('Please fill out all fields!');
+      return;
+    }
+
+    this.flightService
+        .searchFlights(
+            this.fromLocation,
+            this.toLocation,
+            this.departureDate,
+            this.seats,
+            this.travelClass
+        )
+        .subscribe(
+            (data :Flight[]) => {
+              this.flights = [...data];
+              console.log('Flights fetched successfully:', data);
+                this.changeDetectorRef.markForCheck();
+
+            },
+            (error) => {
+              console.error('Error fetching flights:', error);
+              alert('Failed to fetch flights. Please try again later.');
+            }
+        );
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -16,9 +16,7 @@ import { Flight } from '../../classes/flight';
   styleUrls: ['../../../../public/css/flight-list.component.css']
 })
 export class FlightListComponent {
-  public flights: Flight[];
-  
-  ngOnInit(): void{
-    
-  }
+  @Input() flights: Flight[] = [];
+
+  constructor() {}
 }
