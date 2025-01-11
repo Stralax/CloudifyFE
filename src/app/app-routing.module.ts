@@ -13,7 +13,7 @@ import {
 } from "./seznami/components/detail-for-picked-flight/detail-for-picked-flight.component";
 
 const routes: Routes = [
-    {path: '/', redirectTo: '/seznami', pathMatch: 'full'},
+    //{path: '/', redirectTo: '/seznami', pathMatch: 'full'},
     {path: 'login', component: LoginComponent},
     {path: 'registration', component: RegistrationComponent},
     {path: 'buyingTickets', component: ProcessForBuyingTicketComponent},

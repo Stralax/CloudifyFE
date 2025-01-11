@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { NavbarComponent } from '../navbar/navbar.component';
+import { FlightListComponent } from '../flight-list/flight-list.component';
 
 @Component({
   selector: 'app-search-home-page',
   templateUrl: './search-home-page.component.html',
   imports: [
-    FormsModule, NavbarComponent
+    FormsModule, NavbarComponent, FlightListComponent
   ],
   standalone: true,
   styleUrls: ['./search-home-page.component.css']
