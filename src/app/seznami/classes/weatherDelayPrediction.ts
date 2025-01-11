@@ -3,7 +3,7 @@ export class WeatherDelayPrediction {
     weatherForecast: string;
     delayProbability: string;
     finalDestination: string;
-    originalDestination: string;
+    originDestination: string;
     finalDestinationWeatherForecast: string;
     finalDestinationDelayProbability: string;
     windSpeed: string;

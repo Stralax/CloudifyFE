@@ -1,23 +1,28 @@
 <app-navbar></app-navbar>
-<div class="detail-container">
 
-    <div class="Flight-inormation">
+<div class="detail-container">
         <h2>Flight Details</h2>
         <p><strong>Flight ID:</strong> {{ flightDetails.flightId }}</p>
         <p><strong>Airline:</strong> {{ flightDetails.airline }}</p>
+        <p><strong>Status:</strong> {{ flightStatus || 'Fetching status...' }}</p> <!-- Show flight status -->
         <p><strong>Origin:</strong> {{ flightDetails.origin }}</p>
         <p><strong>Destination:</strong> {{ flightDetails.destination }}</p>
-        <p><strong>DepartureTime:</strong> {{ flightDetails.departureTime }}</p>
-        <p><strong>ArrivalTime:</strong> {{ flightDetails.arrivalTime }} $</p>
-        <p><strong>Price:</strong> {{ flightDetails.price }}</p>
+        <p><strong>Departure Time:</strong> {{ flightDetails.departureTime }}</p>
+        <p><strong>Arrival Time:</strong> {{ flightDetails.arrivalTime }}</p>
+        <p><strong>Price:</strong> ${{ flightDetails.price }}</p>
         <p><strong>Duration:</strong> {{ flightDetails.duration }}</p>
-        <p><strong>MaxSeats:</strong> {{ flightDetails.maxSeats }}</p>
+        <p><strong>Max Seats:</strong> {{ flightDetails.maxSeats }}</p>
         <p><strong>Travel Class:</strong> {{ flightDetails.travelClass }}</p>
-    </div>
+
+
+
+    <ng-template #loadingOrError>
+        <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+        <p *ngIf="!errorMessage">Loading flight details...</p>
+    </ng-template>
 
     <app-weather-and-delay></app-weather-and-delay>
-
-    <app-flight-status></app-flight-status>
+    <app-flight-status [flightStatus]="flightStatus"></app-flight-status>
 
     <div class="redirect-button-container">
         <button class="redirect-button" (click)="redirectToOtherPage()">Buy ticket(s)</button>

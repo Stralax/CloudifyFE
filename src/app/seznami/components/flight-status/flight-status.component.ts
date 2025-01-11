@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-flight-status',
@@ -7,15 +7,10 @@ import { Component } from '@angular/core';
   standalone: true
 })
 export class FlightStatusComponent {
-  flightStatuses: string[] = [
-    'Not ready to set off',
-    'Ready to set off',
-    'In the air',
-    'Landed',
-    'Unknown status'
-  ];
+  @Input() flightStatus: string | null = null;
 
-  // Randomize the flight status
-  currentStatus: string = this.flightStatuses[Math.floor(Math.random() * this.flightStatuses.length)];
+  get displayStatus(): string {
+    return this.flightStatus || 'Fetching status...';
+  }
 
 }

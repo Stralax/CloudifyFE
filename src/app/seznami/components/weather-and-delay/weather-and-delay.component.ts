@@ -59,7 +59,7 @@ export class WeatherAndDelayComponent {
           this.finalProbabilityOfDelay = this.weatherDetails.finalProbabilityOfDelay;
           this.flightId = this.weatherDetails.flightId;
           this.humidity = this.weatherDetails.humidity;
-          this.originDestination = this.weatherDetails.originalDestination;
+          this.originDestination = this.weatherDetails.originDestination;
           this.temperature = this.weatherDetails.temperature;
           this.visibility = this.weatherDetails.visibility;
           this.weatherForecast = this.weatherDetails.weatherForecast;

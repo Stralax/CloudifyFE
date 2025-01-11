@@ -29,6 +29,7 @@ export class SearchHomePageComponent {
   constructor(private flightService: FlightService, private changeDetectorRef: ChangeDetectorRef, private ngZone: NgZone) {}
 
   searchFlights() {
+    this.flights =  [];
     if (
         !this.fromLocation ||
         !this.toLocation ||
