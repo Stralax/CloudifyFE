@@ -28,3 +28,4 @@ export class FlightService {
     return this.http.get<Flight[]>(this.baseUrl, { params });
   }
 }
+
