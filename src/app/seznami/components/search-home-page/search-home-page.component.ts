@@ -48,9 +48,10 @@ export class SearchHomePageComponent {
             this.travelClass
         )
         .subscribe(
-            (data :Flight[]) => {
-              this.flights = [...data];
-              console.log('Flights fetched successfully:', data);
+            (data: any) => {
+              this.flights = data.availableFlights;
+              console.log('Flights fetched successfully:', data.availableFlights);
+                console.log('Flights to be passed to child:', this.flights);
                 this.changeDetectorRef.markForCheck();
 
             },
