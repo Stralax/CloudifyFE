@@ -6,9 +6,9 @@ export class WeatherDelayPrediction {
     originalDestination: string;
     finalDestinationWeatherForecast: string;
     finalDestinationDelayProbability: string;
-    windSpeed: number;
-    visibility: number;
-    humidity: number;
-    temperature: number;
+    windSpeed: string;
+    visibility: string;
+    humidity: string;
+    temperature: string;
     finalProbabilityOfDelay: string;
 }

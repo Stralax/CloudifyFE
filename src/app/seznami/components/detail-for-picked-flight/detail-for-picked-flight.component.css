@@ -33,3 +33,36 @@ h2 {
 .redirect-button:hover {
     background-color: #005fa3;
 }
+
+.Flight-inormation {
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+    color: #007acc;
+    margin-top: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+strong {
+    font-weight: bold;
+    color: #007acc;
+}
+
