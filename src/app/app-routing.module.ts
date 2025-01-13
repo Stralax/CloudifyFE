@@ -20,7 +20,7 @@ const routes: Routes = [
     {path: 'flights', component: FlightListComponent},
     {path: 'navbar', component: NavbarComponent},
     {path: 'search-home', component: SearchHomePageComponent},
-    {path: 'profile', component: ProfileComponent},
+    {path: 'profile/:id', component: ProfileComponent},
     {path: 'details/:id', component: DetailForPickedFlightComponent}
 ];
 

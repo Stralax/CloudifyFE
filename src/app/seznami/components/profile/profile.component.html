@@ -3,8 +3,8 @@
     <div class="profile-picture">
     </div>
     <div class="profile-details">
-        <h3>{{ firstName }} {{ lastName }}</h3>
-        <app-loyalty></app-loyalty>
+        <h3>{{ firstName }}</h3>
+        <app-loyalty [loyaltyPoints]="loyaltyPoints"></app-loyalty>
         <p>Balance: ${{ balance }}</p>
     </div>
 </div>

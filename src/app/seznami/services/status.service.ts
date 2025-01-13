@@ -23,7 +23,7 @@ export class StatusService {
       return this.http.get<FlightStatus>(statusUrl).pipe(
           map((data: FlightStatus) => {
               console.log('API response for flight status:', data.status);
-              return data.status; // Check if this returns "Not ready to set off"
+              return data.status;
           }),
           catchError((error) => {
               console.error('Error in getFlightStatus:', error);

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-loyalty',
@@ -7,15 +7,5 @@ import { Component } from '@angular/core';
   standalone: true
 })
 export class LoyaltyComponent {
-  loyaltyPoints: number = 1000;
-
-  // Example of calling the addLoyaltyPoints method
-
-  //const loyaltyComponent = new LoyaltyComponent();
-  //loyaltyComponent.addLoyaltyPoints(500); // Adds 500 points to the current total
-
-  addLoyaltyPoints(points: number) {
-    this.loyaltyPoints += points;
-    console.log(`Loyalty points updated. New total: ${this.loyaltyPoints}`);
-  }
+  @Input() loyaltyPoints: number = 0;
 }
